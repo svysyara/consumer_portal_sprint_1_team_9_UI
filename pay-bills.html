@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pay Bills</title>
+
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/paybills.css" />
+
+    <script src="./js/auth.js"></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="./home.html">Home</a></li>
+            <li><a class="active" href="./pay-bills.html">Pay Bills</a></li>
+            <li>
+                <a href="./register-complaints.html">Register Complaint</a>
+            </li>
+            <li><a href="./complaint-status.html">Complaint Status</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="paybill-container">
+            <h1 class="pc-title">Pay Bills</h1>
+            <div id="billsContainer" class="bills-container"></div>
+
+            <div class="total-section">
+                <h2>Total Amount: ₹<span id="totalAmount">0.00</span></h2>
+                <button id="proceedToPayBtn" class="btn btn-primary" disabled>
+                    Proceed to Pay
+                </button>
+            </div>
+            <br>
+        </div>
+        <div>
+            <div class="profile">
+                <div class="mp-title">
+                    <h3>Welcome, <span id="user-name">Invalid</span></h3>
+                </div>
+                <div id="logout-btn">Logout</div>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script src="./js/paybills.js"></script>
+<script src="./js/update-user.js"></script>
+
+</html>

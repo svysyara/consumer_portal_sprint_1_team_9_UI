@@ -1,0 +1,11 @@
+.mark {
+    position: relative;
+}
+
+.mark::before {
+    content: '*';
+    position: absolute;
+    top: -4px;
+    left: -7px;
+    color: red;
+}

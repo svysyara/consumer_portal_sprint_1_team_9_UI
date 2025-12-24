@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Response Status</title>
+
+    <style>
+        #data {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        #status {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+            font-size: 1.5rem;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="data">
+        <div class="data-container">
+            Customer ID: <span id="cust-id">Not Found</span> <br />
+            Customer Name: <span id="cust-name">Not Found</span> <br />
+            Customer Email: <span id="cust-email">Not Found</span> <br />
+        </div>
+    </div>
+    <div id="status">
+        Processing...
+    </div>
+
+    <br>
+
+    <div align="center"><a href="./login.html">Go to login page</a></div>
+</body>
+
+<script>
+    let status = document.getElementById("status");
+    
+    const params = new URLSearchParams(window.location.search);
+    const message = params.get("status");
+
+    if (message) {
+        status.innerHTML = message;
+
+        let user = localStorage.getItem("user");
+        user = JSON.parse(user);
+        console.log();
+
+        if (user) {
+            document.getElementById("cust-id").innerHTML = user.id;
+            document.getElementById("cust-name").innerHTML = user.name;
+            document.getElementById("cust-email").innerHTML = user.email;
+        }
+        
+    }
+
+</script>
+</html>

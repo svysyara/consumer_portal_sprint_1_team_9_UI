@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <link rel="stylesheet" href="./css/register.css">
+    <link rel="stylesheet" href="./css/elements.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                Register New User
+            </div>
+            <div class="header-link">
+                <a href="./login.html">Already have an account?</a>
+            </div>
+        </header>
+        <main>
+            <form onsubmit="handleSubmit(event)">
+                <div class="main-section">
+                    <div class="ms-header">Customer Details</div>
+                    <div class="ms-body">
+                        <div class="msb-left">
+                            <div class="msb-data">
+                                <label for="cust-num">Customer Number: </label> <input id="cust-num" type="number"
+                                    placeholder="Customer Number" disabled>
+                            </div>
+                        </div>
+                        <div class="msb-right">
+                            <div class="msb-data">
+                                <label for="bill-num" class="mark">Bill Number: </label> <input id="bill-num" type="number"
+                                    placeholder="last 5 digits" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-section">
+                    <div class="ms-header">User Details</div>
+                    <div class="ms-body">
+                        <div class="msb-left">
+                            <div class="msb-data">
+                                <label for="cust-title" class="mark">Title: </label>
+                                <select id="cust-title">
+                                    <option selected value="Mr.">Mr.</option>
+                                    <option value="Ms.">Ms.</option>
+                                    <option value="Mrs.">Mrs.</option>
+                                    <option value="Dr.">Dr.</option>
+                                    <option value="Prof">Prof.</option>
+                                </select>
+                            </div>
+
+                            <div class="msb-data">
+                                <label for="cust-email" class="mark">Email: </label> <input id="cust-email" type="email"
+                                    placeholder="example@abc.com" required>
+                            </div>
+                        </div>
+                        <div class="msb-right">
+                            <div class="msb-data">
+                                <label for="cust-name" class="mark">Name: </label> <input id="cust-name" type="text"
+                                    placeholder="Enter your name" required>
+                            </div>
+
+                            <div class="msbr-s">
+                                <div class="msb-data">
+                                    <label for="cust-phone-c" class="mark">Phone: </label>
+                                    <select id="cust-phone-c">
+
+                                    </select>
+                                </div>
+
+                                <div class="msb-data">
+                                    <input id="cust-phone-n" type="number" placeholder="Phone Number" class="mark" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-section">
+                    <div class="ms-header">Login Details</div>
+                    <div class="ms-body">
+                        <div class="msb-left">
+                            <div class="msb-data">
+                                <label for="cust-userid" class="mark">User Id: </label> <input id="cust-userid" type="text" required>
+                            </div>
+                        </div>
+                        <div class="msb-right">
+                            <div class="msb-data">
+                                <label for="cust-password" class="mark">Password: </label> <input id="cust-password" type="password"
+                                    placeholder="********" required>
+                            </div>
+
+                            <div class="msb-data">
+                                <label for="cust-c-password" class="mark">Confirm Password: </label> <input id="cust-c-password"
+                                    type="password" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-footer">
+                    <button id="btn-reset" type="reset"> Reset </button>
+                    <button id="btn-submit" type="submit"> Register </button>
+                </div>
+            </form>
+    </div>
+</body>
+<script src="./js/script.js"></script>
+<script src="./js/countrycode.js"></script>
+
+</html>

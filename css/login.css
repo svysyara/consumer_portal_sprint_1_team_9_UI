@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    background: #f1f1f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 5vh 0;
+}
+
+header, main {
+    display: flex;
+    width: 100%;
+}
+
+header {
+    font-size: 1.5rem;
+    justify-content: start;
+    padding: 1rem 1.5rem;
+    justify-content: space-between;
+    background: linear-gradient(45deg, #b3d9ff, #b3d9ff65);
+    box-shadow: 5px 5px 15px #00000008;    
+}
+
+.header-content {
+    font-weight: 400;
+}
+
+.header-link {
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 0.2rem;
+}
+
+input {
+    width: 30ch;
+    font-size: 1.1rem;
+    padding: 0.2rem 0.6rem;
+    margin: 0.3rem 0;
+    border-radius: 5px;
+}
+
+label {
+    font-size: 1.1rem;
+}
+
+main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+}
+
+#message {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: red;
+    visibility: hidden;
+}
+
+button {
+    padding: 0.3rem;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+    transition: all .1s;
+    background: linear-gradient(45deg, #5e5eff, #1300e1);
+}
+
+button:hover {
+    box-shadow: -5px -5px 50px #00000036 inset;
+}

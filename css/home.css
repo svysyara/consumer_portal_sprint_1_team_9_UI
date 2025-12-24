@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+nav {
+    display: flex;
+    width: 80%;
+    margin: 1rem auto;
+    background: linear-gradient(45deg, #3030fb41, #120efd44);
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 0.4rem 0.6rem;
+    margin-right: 1rem;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.25s;
+    border: 2px solid #00000000;
+    font-weight: 500;
+}
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #590efa, #3c01c4);
+    transition: all 0.25s;
+    opacity: 0;
+}
+
+.active,
+nav ul li a:hover {
+    color: #fff;
+    border: 2px solid #ffffff31;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.active::before,
+nav ul li a:hover::before {
+    opacity: 1;
+}
+
+main {
+    width: 80%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+}
+
+main .main-title {
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+main .profile {
+    background: linear-gradient(-45deg, #d1c5ff, #f8f2ff);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+main .profile #logout-btn {
+    background-color: rgb(123, 123, 123);
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 0;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 500;
+    transition: all 0.2s;
+    border: 2px solid #00000000;
+}
+
+main .profile #logout-btn:hover {
+    border: 2px solid #ffffff5e;
+    background-color: rgb(74, 74, 74);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+main .profile #logout-btn:active {
+    background-color: #000;
+}

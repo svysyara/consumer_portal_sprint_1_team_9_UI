@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment</title>
+
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/payment.css" />
+    <link rel="stylesheet" href="./css/elements.css" />
+
+    <script src="./js/auth.js"></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./pay-bills.html">Pay Bills</a></li>
+            <li>
+                <a href="./register-complaints.html">Register Complaint</a>
+            </li>
+            <li><a href="./complaint-status.html">Complaint Status</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="payment-container">
+            <div class="content-area">
+                <h1>Payment</h1>
+                <div class="payment-summary">
+                    <h2>Payment Summary</h2>
+                    <div id="selectedBills"></div>
+                    <div class="total-section">
+                        <h3>Total Amount: ₹<span id="totalAmount">0.00</span></h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-form">
+                <h2>Payment Details</h2>
+                <form id="paymentForm" onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label id="modeOfPayment">Credit Card:</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cardNumber" class="mark">Card Number:</label>
+                        <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456"
+                            required />
+                    </div>
+                    <div class="form-group">
+                        <label for="cardName" class="mark">Cardholder Name:</label>
+                        <input type="text" id="cardName" name="cardName" required />
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiryDate" class="mark">Expiry Date:</label>
+                            <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" maxlength="5"
+                                required />
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv" class="mark">CVV:</label>
+                            <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="3" required />
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Pay Now</button>
+                    <button type="button" class="btn btn-secondary" onclick="window.location.href='pay-bills.html'">
+                        Cancel
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div>
+            <div class="profile">
+                <div class="mp-title">
+                    <h3>Welcome, <span id="user-name">Invalid</span></h3>
+                </div>
+                <div id="logout-btn">Logout</div>
+            </div>
+
+            <div id="receipt">
+                
+            </div>
+        </div>
+    </main>
+</body>
+
+<script src="./js/payment.js"></script>
+<script src="./js/update-user.js"></script>
+
+</html>

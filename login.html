@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login User</title>
+
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="header-content">
+                Log In
+            </div>
+            <div class="header-link">
+                <a href="./register.html">Create an account?</a>
+            </div>
+        </header>
+
+        <main>
+            <div id="message">Incorrect Consumer ID or Password</div>
+            <form onsubmit="handleSubmit(event)">
+                <label for="userid">Enter Consumer ID</label>
+                <input id="userid" type="text" placeholder="Enter your consumer ID" required> <br>
+                <label for="password">Enter Your Password</label>
+                <input id="password" type="password" placeholder="*********" required>
+
+                <button type="submit">Log In</button>
+            </form>
+        </main>
+    </div>
+    
+</body>
+<script src="./js/login.js"></script>
+</html>
